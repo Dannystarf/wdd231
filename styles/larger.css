@@ -1,0 +1,155 @@
+@media (min-width: 768px) {
+
+    /* Header adjustments */
+    .hamburger {
+        display: none;
+    }
+
+    /* Navigation */
+    nav {
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+    }
+
+    nav ul {
+        flex-direction: row;
+        background-color: var(--color-primary);
+    }
+
+    nav li {
+        border-bottom: none;
+        border-right: 1px solid var(--color-primary-light);
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav a {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    /* Main */
+    main {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+
+    /* Sections Grid Layout */
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+        align-items: start;
+    }
+
+    .about-section {
+        grid-column: 1;
+    }
+
+    .photo-section {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .student-photo {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .courses-section {
+        grid-column: 1 / -1;
+    }
+
+    /* Courses Grid */
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .course-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--spacing-xl);
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    footer p {
+        flex: 1;
+        text-align: right;
+    }
+
+    #lastModified {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: var(--spacing-2xl);
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    :root {
+        --color-border: #64748b;
+    }
+
+    button,
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Dark mode support for future enhancement */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #0f172a;
+        --color-surface: #1e293b;
+        --color-border: #334155;
+        --color-text: #f1f5f9;
+        --color-text-muted: #cbd5e1;
+    }
+
+    .about-section {
+        background-color: var(--color-surface);
+        border-color: var(--color-border);
+    }
+
+    .course-card {
+        background-color: var(--color-surface);
+        border-color: var(--color-border);
+    }
+
+    .course-card.completed {
+        background-color: #064e3b;
+    }
+
+    .filter-btn {
+        background-color: var(--color-surface);
+        border-color: var(--color-border);
+        color: var(--color-text);
+    }
+
+    .credits-info {
+        background-color: var(--color-surface);
+        border-color: var(--color-border);
+    }
+}
