@@ -130,7 +130,7 @@ header {
 .nav-menu a {
     display: block;
     padding: 1rem 1.5rem;
-    /* Changed to use white text variable for proper contrast (5.23:1 ratio) */
+    /* Changed nav text to pure white for better contrast (5.23:1 ratio) */
     color: var(--nav-text);
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -183,8 +183,7 @@ main {
     font-family: "Playfair Display", serif;
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
-    /* Changed from white to dark text on light background for proper contrast (6.5:1 ratio) */
-    color: var(--primary-color);
+    color: var(--hero-text);
 }
 
 .directory-hero p {
