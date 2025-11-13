@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Springfield Hardware Co.",
+    "address": "456 Main Street, Springfield, ST 12345",
+    "phone": "(555) 123-4567",
+    "website": "www.springfieldhardware.com",
+    "image": "images/members/hardware.jpg",
+    "level": "gold",
+    "founded": "1985"
+  },
+  {
+    "name": "Blue River Coffee House",
+    "address": "789 Market Avenue, Springfield, ST 12345",
+    "phone": "(555) 234-5678",
+    "website": "www.bluerivcoffee.com",
+    "image": "images/members/coffee.jpg",
+    "level": "silver",
+    "founded": "2010"
+  },
+  {
+    "name": "Prairie View Bank",
+    "address": "321 Financial Plaza, Springfield, ST 12345",
+    "phone": "(555) 345-6789",
+    "website": "www.prairieviewbank.com",
+    "image": "images/members/bank.jpg",
+    "level": "gold",
+    "founded": "1978"
+  },
+  {
+    "name": "Sunrise Dental Clinic",
+    "address": "654 Health Street, Springfield, ST 12345",
+    "phone": "(555) 456-7890",
+    "website": "www.sunrisedental.com",
+    "image": "images/members/dental.jpg",
+    "level": "member",
+    "founded": "2015"
+  },
+  {
+    "name": "Midwest Marketing Group",
+    "address": "987 Business Boulevard, Springfield, ST 12345",
+    "phone": "(555) 567-8901",
+    "website": "www.midwestmarketing.com",
+    "image": "images/members/marketing.jpg",
+    "level": "silver",
+    "founded": "2008"
+  },
+  {
+    "name": "Golden Valley Automotive",
+    "address": "135 Industrial Drive, Springfield, ST 12345",
+    "phone": "(555) 678-9012",
+    "website": "www.goldenvalleyauto.com",
+    "image": "images/members/automotive.jpg",
+    "level": "member",
+    "founded": "1992"
+  },
+  {
+    "name": "Springfield Public Library",
+    "address": "246 Cultural Center, Springfield, ST 12345",
+    "phone": "(555) 789-0123",
+    "website": "www.springfieldlibrary.org",
+    "image": "images/members/library.jpg",
+    "level": "member",
+    "founded": "1950"
+  },
+  {
+    "name": "Tech Solutions Inc.",
+    "address": "579 Innovation Park, Springfield, ST 12345",
+    "phone": "(555) 890-1234",
+    "website": "www.techsolutionsinc.com",
+    "image": "images/members/tech.jpg",
+    "level": "gold",
+    "founded": "2012"
+  }
+]

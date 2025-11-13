@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect fill="#1a4d2e" width="200" height="200" rx="10"/>
+  <circle cx="100" cy="70" r="30" fill="#d4a574"/>
+  <path d="M60 120 Q60 90 100 90 Q140 90 140 120 L140 160 L60 160 Z" fill="#d4a574"/>
+  <text x="100" y="175" font-size="20" font-weight="bold" text-anchor="middle" fill="#f5f3f0">CHAMBER</text>
+</svg>
