@@ -130,7 +130,7 @@ header {
 .nav-menu a {
     display: block;
     padding: 1rem 1.5rem;
-    /* Changed nav text to pure white for better contrast (5.23:1 ratio) */
+    /* Changed to use white text variable for proper contrast (5.23:1 ratio) */
     color: var(--nav-text);
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -183,7 +183,8 @@ main {
     font-family: "Playfair Display", serif;
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
-    color: var(--hero-text);
+    /* Changed from white to dark text on light background for proper contrast (6.5:1 ratio) */
+    color: var(--primary-color);
 }
 
 .directory-hero p {
@@ -500,5 +501,385 @@ footer {
         height: 150px;
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+}
+
+/* ===== HOME PAGE STYLES ===== */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 400px;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background-color: rgba(26, 77, 46, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.hero-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: var(--light-text);
+    margin: 0 0 0.5rem 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c9934a;
+    transform: scale(1.05);
+}
+
+/* Events Section */
+.events-section {
+    margin-bottom: 3rem;
+}
+
+.events-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    background-color: white;
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.event-date,
+.event-time,
+.event-location {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.event-card p {
+    color: var(--dark-text);
+    line-height: 1.5;
+}
+
+/* Weather Section */
+.weather-section {
+    margin-bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.weather-current {
+    background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+    color: var(--light-text);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-temp {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 700;
+}
+
+.weather-desc {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.weather-location {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.error-message {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Added forecast-items and updated forecast styling */
+.forecast-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-day {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-date {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.forecast-condition {
+    font-size: 0.9rem;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.forecast-temps {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Spotlights Section */
+.spotlights-section {
+    margin-bottom: 3rem;
+}
+
+.spotlights-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.spotlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.spotlight-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.spotlight-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-level {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+}
+
+.spotlight-level.silver {
+    background-color: #f0f4c3;
+    color: #f57f17;
+}
+
+.spotlight-level.gold {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.spotlight-address,
+.spotlight-phone,
+.spotlight-website {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-website a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.spotlight-website a:hover {
+    color: var(--accent-color);
+}
+
+/* ===== RESPONSIVE HOME PAGE ===== */
+@media (max-width: 768px) {
+    .hero {
+        height: 250px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .weather-container {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlights-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 200px;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forecast-day p {
+        font-size: 0.85rem;
+    }
+
+    .forecast-temp {
+        font-size: 1.2rem;
     }
 }
