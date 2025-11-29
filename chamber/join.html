@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Springfield Chamber of Commerce and grow your business.">
+    <meta name="author" content="Daniel Ajayi">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="Join Springfield Chamber of Commerce">
+    <meta property="og:description" content="Become a member and grow your business network in Springfield.">
+    <meta property="og:image" content="https://dannystarf.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com/chamber/join.html">
+
+    <title>Join - Springfield Chamber of Commerce</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/join.js" defer></script>`
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <img src="images/logo.svg" alt="Springfield Chamber Logo" class="logo">
+            <div class="header-info">
+                <h1>Springfield Chamber of Commerce</h1>
+                <p class="tagline">Building Community, Growing Business</p>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com" title="Facebook" aria-label="Facebook">f</a>
+                <a href="https://linkedin.com" title="LinkedIn" aria-label="LinkedIn">in</a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="directory-hero">
+            <h2>Join Our Chamber</h2>
+            <p>Become part of our thriving business community</p>
+        </section>
+
+        <div class="join-container">
+            <!-- Membership Form -->
+            <section class="form-section">
+                <h2>Membership Application</h2>
+                <form id="membershipForm" method="GET" action="thankyou.html">
+                    <!-- First Name -->
+                    <label for="firstName">
+                        First Name <span class="required">*</span>
+                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name"
+                            title="Enter your first name">
+                    </label>
+
+                    <!-- Last Name -->
+                    <label for="lastName">
+                        Last Name <span class="required">*</span>
+                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name"
+                            title="Enter your last name">
+                    </label>
+
+                    <!-- Organization Title -->
+                    <label for="orgTitle">
+                        Your Title <span class="required">*</span>
+                        <input type="text" id="orgTitle" name="orgTitle" required autocomplete="organization-title"
+                            pattern="^[a-zA-Z\s\-]{7,}$"
+                            title="Title must be at least 7 characters and contain only letters, hyphens, and spaces"
+                            placeholder="e.g., Chief Executive Officer">
+                    </label>
+
+                    <!-- Email -->
+                    <label for="email">
+                        Email <span class="required">*</span>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            title="Enter a valid email address" placeholder="you@example.com">
+                    </label>
+
+                    <!-- Phone -->
+                    <label for="phone">
+                        Phone <span class="required">*</span>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                            title="Enter your phone number">
+                    </label>
+
+                    <!-- Business Name -->
+                    <label for="businessName">
+                        Business/Organization Name <span class="required">*</span>
+                        <input type="text" id="businessName" name="businessName" required autocomplete="organization"
+                            title="Enter your business or organization name">
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label for="membershipLevel">
+                        Membership Level <span class="required">*</span>
+                        <select id="membershipLevel" name="membershipLevel" required title="Select a membership level">
+                            <option value="">-- Select a membership level --</option>
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- Business Description -->
+                    <label for="businessDesc">
+                        Business Description
+                        <textarea id="businessDesc" name="businessDesc" rows="5"
+                            title="Describe your business or organization"
+                            placeholder="Tell us about your business..."></textarea>
+                    </label>
+
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </section>
+
+            <!-- Membership Cards Section -->
+            <section class="membership-cards-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards-container">
+                    <!-- NP Membership Card -->
+                    <div class="membership-card" data-level="np">
+                        <h3>NP Membership</h3>
+                        <p class="price">Free</p>
+                        <p class="description">For non-profit organizations</p>
+                        <button class="info-btn" aria-label="Learn more about NP Membership" data-modal="npModal">Learn
+                            More</button>
+                    </div>
+
+                    <!-- Bronze Membership Card -->
+                    <div class="membership-card" data-level="bronze">
+                        <h3>Bronze Membership</h3>
+                        <p class="price">$99/month</p>
+                        <p class="description">Growing businesses</p>
+                        <button class="info-btn" aria-label="Learn more about Bronze Membership"
+                            data-modal="bronzeModal">Learn More</button>
+                    </div>
+
+                    <!-- Silver Membership Card -->
+                    <div class="membership-card" data-level="silver">
+                        <h3>Silver Membership</h3>
+                        <p class="price">$199/month</p>
+                        <p class="description">Established businesses</p>
+                        <button class="info-btn" aria-label="Learn more about Silver Membership"
+                            data-modal="silverModal">Learn More</button>
+                    </div>
+
+                    <!-- Gold Membership Card -->
+                    <div class="membership-card" data-level="gold">
+                        <h3>Gold Membership</h3>
+                        <p class="price">$299/month</p>
+                        <p class="description">Premier businesses</p>
+                        <button class="info-btn" aria-label="Learn more about Gold Membership"
+                            data-modal="goldModal">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- NP Membership Modal -->
+        <dialog id="npModal" class="membership-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h3>NP Membership Benefits</h3>
+                <ul>
+                    <li>Networking opportunities with other non-profits</li>
+                    <li>Access to community events</li>
+                    <li>Member directory listing</li>
+                    <li>Email newsletter and updates</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <!-- Bronze Membership Modal -->
+        <dialog id="bronzeModal" class="membership-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h3>Bronze Membership Benefits</h3>
+                <ul>
+                    <li>All NP Membership benefits</li>
+                    <li>Basic business listing with logo</li>
+                    <li>Monthly networking events</li>
+                    <li>Discounted event registration</li>
+                    <li>One business training course per year</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <!-- Silver Membership Modal -->
+        <dialog id="silverModal" class="membership-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h3>Silver Membership Benefits</h3>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>Enhanced business listing with logo and description</li>
+                    <li>Quarterly spotlight feature on home page</li>
+                    <li>Priority event registration</li>
+                    <li>Four business training courses per year</li>
+                    <li>Exclusive networking lunch access</li>
+                </ul>
+            </div>
+        </dialog>
+
+        <!-- Gold Membership Modal -->
+        <dialog id="goldModal" class="membership-modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h3>Gold Membership Benefits</h3>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Premium business listing with featured banner</li>
+                    <li>Monthly spotlight feature on home page</li>
+                    <li>VIP networking events</li>
+                    <li>Unlimited business training courses</li>
+                    <li>Executive director consultation hours</li>
+                    <li>Co-marketing opportunities</li>
+                </ul>
+            </div>
+        </dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Commerce Street</p>
+                <p>Springfield, ST 12345</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@springfieldchamber.org</p>
+            </div>
+            <div class="footer-section">
+                <p>&copy; <span id="year"></span> Springfield Chamber of Commerce</p>
+                <p>WDD 231 - Semester Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
