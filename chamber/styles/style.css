@@ -884,6 +884,213 @@ footer {
     }
 }
 
+/* ===== DISCOVER PAGE STYLES ===== */
+.discover-hero {
+    background-color: var(--primary-color);
+    /* Used primary for consistency with other heroes */
+    color: var(--light-text);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.discover-hero h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+.discover-hero p {
+    font-size: 1.2rem;
+    color: #e8d5c4;
+    /* Retained original lighter text color for contrast */
+}
+
+/* Visitor Tracking Message */
+.visitor-message-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.visitor-message {
+    background-color: var(--light-bg);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.visitor-message.first-visit {
+    border-left-color: #4caf50;
+    background-color: #e8f5e9;
+}
+
+.visitor-message.returning-same-day {
+    border-left-color: #ff9800;
+    background-color: #fff3e0;
+}
+
+.visitor-message.returning-visitor {
+    border-left-color: #2196f3;
+    background-color: #e3f2fd;
+}
+
+/* Attractions Grid Container */
+.discover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Responsive grid layout using grid-template-areas */
+@media (min-width: 320px) and (max-width: 640px) {
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .attractions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .attractions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Create balanced layout for 8 items */
+    .attractions-grid {
+        grid-auto-rows: auto;
+    }
+}
+
+/* Attraction Card Styles */
+.attraction-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.attraction-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    /* Added hover effect for image on larger screens */
+    transition: transform 0.3s ease;
+}
+
+/* Desktop hover effect for images - only on medium+ screens */
+@media (min-width: 641px) {
+    .attraction-card:hover .attraction-image {
+        transform: scale(1.05);
+    }
+}
+
+.attraction-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.attraction-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.attraction-content .address {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.attraction-content .description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* ===== RESPONSIVE DISCOVER PAGE ===== */
+@media (max-width: 768px) {
+    .discover-hero {
+        padding: 1.5rem 1rem;
+    }
+
+    .discover-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .discover-hero p {
+        font-size: 1rem;
+    }
+
+    .visitor-message {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .attractions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover-hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .discover-hero p {
+        font-size: 0.9rem;
+    }
+
+    .attraction-image {
+        height: 150px;
+    }
+
+    .attraction-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .attraction-content .address {
+        font-size: 0.85rem;
+    }
+
+    .attraction-content .description {
+        font-size: 0.9rem;
+    }
+}
+
 /* Add join page form styles */
 
 /* Join Container */
