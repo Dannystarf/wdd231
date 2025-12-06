@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Simpsons Park",
+    "address": "123 Animation Boulevard, Springfield, ST 12345",
+    "description": "Family-friendly park featuring walking trails, playgrounds, and scenic viewpoints of the Springfield Valley.",
+    "image": "images/attractions/simpsons-park.webp"
+  },
+  {
+    "id": 2,
+    "name": "Springfield Nuclear Power Plant",
+    "address": "456 Energy Lane, Springfield, ST 12345",
+    "description": "Historic nuclear facility offering guided tours showcasing sustainable energy production and innovation in technology.",
+    "image": "images/attractions/power-plant.webp"
+  },
+  {
+    "id": 3,
+    "name": "Moe's Tavern Historic District",
+    "address": "789 Main Street, Springfield, ST 12345",
+    "description": "Vibrant downtown area with local restaurants, shops, galleries, and entertainment venues perfect for a night out.",
+    "image": "images/attractions/moes-tavern.webp"
+  },
+  {
+    "id": 4,
+    "name": "Springfield Museum of Natural History",
+    "address": "321 Cultural Avenue, Springfield, ST 12345",
+    "description": "World-class museum featuring exhibits on paleontology, world cultures, and interactive science displays.",
+    "image": "images/attractions/museum.webp"
+  },
+  {
+    "id": 5,
+    "name": "Krusty Land Amusement Park",
+    "address": "555 Fun Way, Springfield, ST 12345",
+    "description": "Theme park with thrilling rides, entertainment shows, and family attractions for all ages.",
+    "image": "images/attractions/krusty-land.webp"
+  },
+  {
+    "id": 6,
+    "name": "Springfield Gorge",
+    "address": "888 Scenic Route, Springfield, ST 12345",
+    "description": "Breathtaking natural wonder offering hiking trails, scenic overlooks, and opportunities for outdoor photography.",
+    "image": "images/attractions/gorge.webp"
+  },
+  {
+    "id": 7,
+    "name": "Evergreen Terrace Historic Neighborhood",
+    "address": "742 Evergreen Terrace, Springfield, ST 12345",
+    "description": "Charming residential area with beautiful tree-lined streets, local coffee shops, and boutique shopping.",
+    "image": "images/attractions/evergreen-terrace.webp"
+  },
+  {
+    "id": 8,
+    "name": "Shelbyville Speedway",
+    "address": "999 Race Track Road, Springfield, ST 12345",
+    "description": "Premier racing venue hosting motorsports events, including stock car racing, drag racing, and driving experiences.",
+    "image": "images/attractions/speedway.webp"
+  }
+]
