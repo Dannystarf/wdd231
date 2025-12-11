@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="National Parks Trip Planner - Plan your perfect national park adventure. Answer a few questions and get personalized park recommendations.">
+    <meta name="Daniel Ajayi" content="National Parks Explorer">
+    <meta property="og:title" content="Trip Planner - National Parks Explorer">
+    <meta property="og:description" content="Get personalized national park recommendations based on your travel preferences, budget, and interests.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>Trip Planner - National Parks Explorer</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/trip-planner.css">
+    <script type="module" src="scripts/trip-planner.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>National Parks Explorer</h1>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="trip-planner.html" class="active">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h2>Plan Your Perfect Trip</h2>
+            <p>Answer a few questions and receive personalized national park recommendations</p>
+        </section>
+
+        <!-- Trip Planner Form -->
+        <section class="planner-form-section">
+            <form id="tripPlannerForm" class="trip-planner-form" action="form-action.html" method="POST" novalidate>
+                <fieldset>
+                    <legend>Trip Duration</legend>
+                    
+                    <div class="form-group">
+                        <label for="tripName">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="tripName" 
+                            name="trip_name"
+                            placeholder="Enter your name"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tripEmail">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="tripEmail" 
+                            name="trip_email"
+                            placeholder="your@email.com"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tripDuration">How long is your trip? (days) *</label>
+                        <select id="tripDuration" name="trip_duration" required aria-required="true">
+                            <option value="">-- Select Duration --</option>
+                            <option value="1-2">1-2 days (weekend trip)</option>
+                            <option value="3-5">3-5 days</option>
+                            <option value="6-10">6-10 days</option>
+                            <option value="10+">10+ days (extended adventure)</option>
+                        </select>
+                        <span class="error-message" id="durationError"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Travel Preferences</legend>
+
+                    <div class="form-group">
+                        <label for="bestSeason">When do you prefer to travel? *</label>
+                        <select id="bestSeason" name="best_season" required aria-required="true">
+                            <option value="">-- Select Season --</option>
+                            <option value="Spring">Spring (March - May)</option>
+                            <option value="Summer">Summer (June - August)</option>
+                            <option value="Fall">Fall (September - November)</option>
+                            <option value="Winter">Winter (December - February)</option>
+                        </select>
+                        <span class="error-message" id="seasonError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="elevation">What's your preference for elevation/difficulty? *</label>
+                        <select id="elevation" name="elevation_preference" required aria-required="true">
+                            <option value="">-- Select Level --</option>
+                            <option value="low">Low elevation, easy trails</option>
+                            <option value="moderate">Moderate elevation and trails</option>
+                            <option value="high">High elevation, challenging trails</option>
+                            <option value="any">No preference</option>
+                        </select>
+                        <span class="error-message" id="elevationError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset class="nested-fieldset">
+                            <legend>What type of activities interest you? (Select all that apply) *</legend>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Hiking">
+                                    Hiking
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Photography">
+                                    Photography
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Wildlife Viewing">
+                                    Wildlife Viewing
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Rock Climbing">
+                                    Rock Climbing
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Scenic Drives">
+                                    Scenic Drives
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="activities" value="Camping">
+                                    Camping
+                                </label>
+                            </div>
+                            <span class="error-message" id="activitiesError"></span>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset class="nested-fieldset">
+                            <legend>What's your travel style? *</legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="travel_style" value="family-friendly" required>
+                                    Family-friendly (accessible, less strenuous)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="travel_style" value="adventure">
+                                    Adventure-focused (challenging hikes, off-the-beaten-path)
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="travel_style" value="balanced">
+                                    Balanced (mix of relaxation and exploration)
+                                </label>
+                            </div>
+                            <span class="error-message" id="styleError"></span>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">What's your estimated budget per day? *</label>
+                        <select id="budget" name="budget" required aria-required="true">
+                            <option value="">-- Select Budget --</option>
+                            <option value="budget">Budget-conscious ($50-100/day)</option>
+                            <option value="moderate">Moderate ($100-200/day)</option>
+                            <option value="comfortable">Comfortable ($200-400/day)</option>
+                            <option value="luxury">Luxury ($400+/day)</option>
+                        </select>
+                        <span class="error-message" id="budgetError"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <div class="form-group">
+                        <label for="groupSize">How many people will be traveling? *</label>
+                        <input 
+                            type="number" 
+                            id="groupSize" 
+                            name="group_size"
+                            min="1" 
+                            max="50"
+                            placeholder="Number of people"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="error-message" id="groupError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Any special requests or additional info?</label>
+                        <textarea 
+                            id="specialRequests" 
+                            name="special_requests"
+                            placeholder="e.g., I'm looking for parks with hot springs, family with young children, etc."
+                            rows="4"
+                            maxlength="500"
+                        ></textarea>
+                        <small>Max 500 characters</small>
+                    </div>
+
+                    <div class="form-group checkbox-label">
+                        <input 
+                            type="checkbox" 
+                            id="newsletter" 
+                            name="newsletter"
+                            value="yes"
+                        >
+                        <label for="newsletter">Subscribe to our newsletter for park updates and travel tips</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Get Recommendations</button>
+                    <button type="reset" class="btn btn-secondary" id="resetBtn">Clear Form</button>
+                </div>
+
+                <p class="required-note">* Required fields</p>
+            </form>
+        </section>
+
+        <!-- Loading State (hidden by default) -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Finding your perfect parks...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>National Parks Explorer</h4>
+                <p>Discover, explore, and plan your adventures to America's greatest natural treasures.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Video Demonstration</h4>
+                <p>Watch our feature walkthrough video:</p>
+                <a href="https://www.youtube.com" target="_blank" class="video-link">View Video (YouTube)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 National Parks Explorer. All rights reserved. | <a href="attributions.html">Attributions</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

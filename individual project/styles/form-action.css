@@ -1,0 +1,564 @@
+/* ========================================
+   FORM ACTION PAGE SPECIFIC STYLES
+   ======================================== */
+
+.success-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.success-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-card h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.success-card p {
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Preferences Section */
+.preferences-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.preferences-section h3 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.pref-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pref-item strong {
+  font-size: 13px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pref-item span {
+  font-size: 15px;
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.recommendations-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.recommendations-intro {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.recommendation-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.rec-rank {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.rec-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: var(--light-bg);
+}
+
+.rec-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.rec-content h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.rec-location {
+  font-size: 13px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.rec-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 13px;
+  color: #666;
+}
+
+.rec-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.rec-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.rec-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.activity-tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.rec-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.best-season {
+  font-size: 12px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.btn-small {
+  padding: 6px 14px;
+  font-size: 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+  background-color: #4a8bc2;
+}
+
+/* No Recommendations */
+.no-recommendations {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: var(--shadow);
+}
+
+.no-recommendations h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.no-recommendations p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* CTA Action Section */
+.cta-action {
+  text-align: center;
+  max-width: 800px;
+  margin: 3rem auto 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.cta-action h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cta-action p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  min-width: 150px;
+}
+
+/* Added modal styles for park details modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 1001;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--primary-color);
+  cursor: pointer;
+  z-index: 1002;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--accent-color);
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-park-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-park-details {
+  padding: 2rem;
+}
+
+.modal-park-details h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.modal-location {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.modal-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  background-color: var(--light-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.meta-item strong {
+  font-size: 12px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meta-item span {
+  font-size: 14px;
+  color: var(--dark-text);
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.modal-section h3 {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.modal-section p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 1.5rem;
+}
+
+.modal-footer .btn {
+  min-width: 120px;
+}
+
+/* Print Styles */
+@media print {
+
+  header,
+  footer,
+  .cta-action,
+  .action-buttons {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+  }
+
+  .preferences-grid {
+    page-break-inside: avoid;
+  }
+
+  .modal {
+    display: none !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-section {
+    padding: 2rem 1rem;
+  }
+
+  .success-card h2 {
+    font-size: 28px;
+  }
+
+  .preferences-section,
+  .recommendations-section,
+  .cta-action {
+    padding: 0 1rem;
+  }
+
+  .preferences-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 90vh;
+    width: 95%;
+  }
+
+  .modal-park-details {
+    padding: 1.5rem;
+  }
+
+  .modal-park-details h2 {
+    font-size: 20px;
+  }
+
+  .modal-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-card h2 {
+    font-size: 24px;
+  }
+
+  .success-card p {
+    font-size: 14px;
+  }
+
+  .preferences-section h3,
+  .recommendations-section h2,
+  .cta-action h3 {
+    font-size: 20px;
+  }
+
+  .pref-item strong {
+    font-size: 11px;
+  }
+
+  .pref-item span {
+    font-size: 13px;
+  }
+
+  .rec-content h3 {
+    font-size: 18px;
+  }
+
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+
+  .modal-park-image {
+    height: 200px;
+  }
+
+  .modal-park-details {
+    padding: 1rem;
+  }
+
+  .modal-park-details h2 {
+    font-size: 18px;
+  }
+
+  .modal-section h3 {
+    font-size: 14px;
+  }
+
+  .modal-section p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="National Parks Explorer - Discover America's greatest natural treasures. Explore, plan, and experience unforgettable national park adventures.">
+    <meta name="Daniel Ajayi" content="National Parks Explorer">
+    <meta property="og:title" content="National Parks Explorer - Discover & Plan Your Adventure">
+    <meta property="og:description" content="Explore America's National Parks with detailed information, trip planning tools, and personalized recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dannystarf.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://nationalparkexplorer.org">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>National Parks Explorer - Discover America's Greatest Parks</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>National Parks Explorer</h1>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Discover America's Greatest Treasures</h2>
+                    <p>Explore breathtaking landscapes, plan your perfect adventure, and connect with nature's wonders.</p>
+                    <div class="hero-buttons">
+                        <a href="parks-directory.html" class="btn btn-primary">Explore Parks</a>
+                        <a href="trip-planner.html" class="btn btn-secondary">Plan Your Trip</a>
+                    </div>
+                </div>
+            </div>
+            <img src="images/hero-national-parks.jpg" alt="Grand Canyon scenic vista" class="hero-image" loading="lazy" width="800" height="400">
+        </section>
+
+        <!-- Featured Parks Section -->
+        <section class="featured-parks">
+            <div class="section-header">
+                <h2>Featured Parks</h2>
+                <p>Start your journey by exploring some of America's most iconic national parks</p>
+            </div>
+            <div class="parks-grid" id="featuredParksContainer">
+                <!-- Featured parks will be dynamically loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="quick-stats">
+            <div class="stat">
+                <h3>63</h3>
+                <p>National Parks</p>
+            </div>
+            <div class="stat">
+                <h3>330M+</h3>
+                <p>Annual Visitors</p>
+            </div>
+            <div class="stat">
+                <h3>85M</h3>
+                <p>Protected Acres</p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Ready to Start Your Adventure?</h2>
+            <p>Browse our complete directory of national parks or use our trip planner to find the perfect park for your next vacation.</p>
+            <div class="cta-buttons">
+                <a href="parks-directory.html" class="btn btn-primary">Browse All Parks</a>
+                <a href="trip-planner.html" class="btn btn-outline">Start Planning</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>National Parks Explorer</h4>
+                <p>Discover, explore, and plan your adventures to America's greatest natural treasures.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Video Demonstration</h4>
+                <p>Watch our feature walkthrough video:</p>
+                <a href="https://www.youtube.com" target="_blank" class="video-link">View Video (YouTube)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 National Parks Explorer. All rights reserved. | <a href="attributions.html">Attributions</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

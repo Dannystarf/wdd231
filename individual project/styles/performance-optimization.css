@@ -1,0 +1,121 @@
+/* New CSS file for performance optimization page styling */
+.perf-header {
+    background: linear-gradient(135deg, #2d5f3f, #d97f3e);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.perf-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+.perf-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.perf-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perf-section h2 {
+    color: #2d5f3f;
+    border-bottom: 3px solid #d97f3e;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.metric-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #2d5f3f;
+    border-radius: 4px;
+}
+
+.metric-label {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.metric-value {
+    color: #2d5f3f;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checklist li:last-child {
+    border-bottom: none;
+}
+
+.checklist li:before {
+    content: "✓ ";
+    color: #27ae60;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.success-box {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .perf-header {
+        padding: 30px 20px;
+    }
+
+    .perf-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .metric-grid {
+        grid-template-columns: 1fr;
+    }
+}

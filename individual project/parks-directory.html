@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse America's National Parks - Comprehensive directory with search and filter options. Find the perfect park for your adventure.">
+    <meta name="Daniel Ajayi" content="National Parks Explorer">
+    <meta property="og:title" content="National Parks Directory - Explore All Parks">
+    <meta property="og:description" content="Search and discover 63+ national parks with detailed information about location, activities, and best seasons to visit.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>Parks Directory - National Parks Explorer</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/parks-directory.css">
+    <script type="module" src="scripts/parks-directory.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>National Parks Explorer</h1>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parks-directory.html" class="active">Parks Directory</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h2>Explore All National Parks</h2>
+            <p>Discover the complete collection of America's National Parks</p>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search parks by name or location..."
+                        aria-label="Search parks"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <div class="filter-group">
+                    <label for="activityFilter">Filter by Activity:</label>
+                    <select id="activityFilter" aria-label="Filter parks by activity">
+                        <option value="">All Activities</option>
+                        <option value="Hiking">Hiking</option>
+                        <option value="Wildlife Viewing">Wildlife Viewing</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Rock Climbing">Rock Climbing</option>
+                        <option value="Scenic Drives">Scenic Drives</option>
+                        <option value="Camping">Camping</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="seasonFilter">Best Season:</label>
+                    <select id="seasonFilter" aria-label="Filter parks by season">
+                        <option value="">All Seasons</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                    </select>
+                </div>
+
+                <button id="clearFilters" class="btn-secondary" aria-label="Clear all filters">Clear Filters</button>
+            </div>
+
+            <div class="sort-container">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy" aria-label="Sort parks by">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="established">Oldest First</option>
+                    <option value="area">Largest Area</option>
+                    <option value="rating">Highest Rated</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Results Info -->
+        <section class="results-info">
+            <p id="resultsCount">Showing 15 parks</p>
+        </section>
+
+        <!-- Parks Grid -->
+        <section class="parks-grid-section">
+            <div class="parks-grid" id="parksGrid">
+                <!-- Parks will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No Parks Found</h3>
+            <p>Try adjusting your search or filter criteria.</p>
+            <button id="resetSearch" class="btn btn-primary">Reset Search</button>
+        </div>
+    </main>
+
+    <!-- Modal for Park Details -->
+    <div id="parkModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="parkModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+            <div id="modalBody">
+                <!-- Park details will be loaded here -->
+            </div>
+            <div class="modal-actions">
+                <button id="addToFavorites" class="btn btn-primary">Add to Favorites</button>
+                <button id="closeModalBtn" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>National Parks Explorer</h4>
+                <p>Discover, explore, and plan your adventures to America's greatest natural treasures.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Video Demonstration</h4>
+                <p>Watch our feature walkthrough video:</p>
+                <a href="https://www.youtube.com" target="_blank" class="video-link">View Video (YouTube)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 National Parks Explorer. All rights reserved. | <a href="attributions.html">Attributions</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

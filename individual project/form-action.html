@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Your Personalized National Parks Recommendations - Based on your travel preferences and interests.">
+    <meta name="author" content="National Parks Explorer">
+    <meta property="og:title" content="Your Park Recommendations">
+    <meta property="og:description"
+        content="Discover your personalized national park recommendations from National Parks Explorer.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <title>Your Recommendations - National Parks Explorer</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Added specific CSS file for form action page -->
+    <link rel="stylesheet" href="styles/form-action.css">
+    <script type="module" src="scripts/form-action.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>National Parks Explorer</h1>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Success Message -->
+        <section class="success-section">
+            <div class="success-card">
+                <h2>We Found Your Perfect Parks!</h2>
+                <p id="userGreeting">Thanks for planning with us!</p>
+            </div>
+        </section>
+
+        <!-- Your Preferences -->
+        <section class="preferences-section">
+            <h3>Your Trip Details</h3>
+            <div class="preferences-grid">
+                <div class="pref-item">
+                    <strong>Duration:</strong>
+                    <span id="prefDuration">-</span>
+                </div>
+                <div class="pref-item">
+                    <strong>Season:</strong>
+                    <span id="prefSeason">-</span>
+                </div>
+                <div class="pref-item">
+                    <strong>Travel Style:</strong>
+                    <span id="prefStyle">-</span>
+                </div>
+                <div class="pref-item">
+                    <strong>Group Size:</strong>
+                    <span id="prefGroup">-</span>
+                </div>
+                <div class="pref-item">
+                    <strong>Activities:</strong>
+                    <span id="prefActivities">-</span>
+                </div>
+                <div class="pref-item">
+                    <strong>Budget Range:</strong>
+                    <span id="prefBudget">-</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Parks -->
+        <section class="recommendations-section">
+            <h2>Your Personalized Recommendations</h2>
+            <p class="recommendations-intro">Based on your preferences, we recommend these incredible national parks for
+                your next adventure.</p>
+
+            <div class="recommendations-grid" id="recommendationsGrid">
+                <!-- Recommended parks will be dynamically loaded here -->
+            </div>
+
+            <div id="noRecommendations" class="no-recommendations" style="display: none;">
+                <h3>No Exact Matches Found</h3>
+                <p>We couldn't find parks that perfectly match all your criteria. Try adjusting your preferences or
+                    browse our full directory.</p>
+                <a href="parks-directory.html" class="btn btn-primary">Browse All Parks</a>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-action">
+            <h3>Ready to Explore?</h3>
+            <p>Save these recommendations, view detailed information, or search for more parks.</p>
+            <div class="action-buttons">
+                <button id="printBtn" class="btn btn-secondary">Print Recommendations</button>
+                <a href="parks-directory.html" class="btn btn-primary">Browse More Parks</a>
+                <a href="trip-planner.html" class="btn btn-outline">New Search</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Added modal for park details on form-action page -->
+    <div id="parkModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <span>&times;</span>
+            </button>
+            <div class="modal-body">
+                <img id="modalParkImage" src="/placeholder.svg" alt="" class="modal-park-image">
+                <div class="modal-park-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalLocation" class="modal-location"></p>
+
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <strong>Rating:</strong>
+                            <span id="modalRating"></span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Area:</strong>
+                            <span id="modalArea"></span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Elevation:</strong>
+                            <span id="modalElevation"></span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Established:</strong>
+                            <span id="modalEstablished"></span>
+                        </div>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p id="modalDescription"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Best Season</h3>
+                        <p id="modalBestSeason"></p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Activities</h3>
+                        <div id="modalActivities" class="modal-activities"></div>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Hours</h3>
+                        <p id="modalHours"></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="modalCloseBtn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>National Parks Explorer</h4>
+                <p>Discover, explore, and plan your adventures to America's greatest natural treasures.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parks-directory.html">Parks Directory</a></li>
+                    <li><a href="trip-planner.html">Trip Planner</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Video Demonstration</h4>
+                <p>Watch our feature walkthrough video:</p>
+                <a href="https://www.youtube.com" target="_blank" class="video-link">View Video (YouTube)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 National Parks Explorer. All rights reserved. | <a href="attributions.html">Attributions</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
